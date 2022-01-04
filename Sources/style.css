@@ -148,3 +148,14 @@ li {
   justify-content: space-between;
   align-items: center;
 }
+footer {
+  font-size: small;
+  margin: 0;
+  text-align: center;
+  margin-top: -74px;
+  margin-left: -320px;
+}
+.credit {
+  font-size: small;
+  color: #5664ff;
+}
