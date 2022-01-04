@@ -1,0 +1,150 @@
+h1 {
+  color: #7f7f7f;
+  padding-top: 30px;
+  font-family: "Spline Sans", sans-serif;
+  font-weight: 400;
+}
+ul {
+  padding: 0;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  color: #7f7f7f;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+.weather-app {
+  border: 1px solid #dadde1;
+  padding: 27px;
+  padding-bottom: 21px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  max-width: 565px;
+  margin: auto;
+  margin-block: 82px;
+  box-shadow: 2px 5px 5px rgb(0 0 0 / 2%);
+}
+.headerDegree {
+  font-family: "Quantico", sans-serif;
+  font-size: 90px;
+  color: 7f7f7f;
+}
+.headerDegree:hover {
+  font-family: "Quantico", sans-serif;
+  font-size: 90px;
+  opacity: 0.8;
+  color: #2cc567;
+}
+
+.farenheit {
+  font-size: 25px;
+  position: relative;
+  top: -38px;
+  font-family: "Roboto";
+}
+
+#inputCity {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  border-radius: 4px;
+  padding-right: 94px;
+  line-height: 40px;
+  margin-right: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+  box-shadow: 2px 5px 5px rgb(0 0 0 / 5%);
+}
+.searchButton {
+  padding: 10px 17px;
+  margin-left: 0px;
+  background: #5664ff;
+  color: whitesmoke;
+  border-radius: 4px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 2px 5px 5px rgb(0 0 0 / 10%);
+}
+
+#currentButton {
+  padding: 10px 17px;
+  margin-left: 14px;
+  background: #ff3e3a;
+  color: whitesmoke;
+  border-radius: 4px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 2px 5px 5px rgb(0 0 0 / 10%);
+}
+.fas {
+  font-size: 20px;
+}
+.bordersRed,
+.bordersBlue,
+.bordersGreen,
+.bordersYellow,
+.bordersOrange {
+  border: 3px solid transparent;
+  font-family: "Roboto", sans-serif;
+  padding: 40px 10px 40px 10px;
+  margin: -9px;
+  background: transparent;
+  color: #58555a;
+  font-size: 18px;
+  transition: all 200ms ease-in-out;
+}
+
+.bordersRed:hover {
+  background-color: #ff3e3a;
+  font-family: "Roboto", sans-serif;
+  color: #fcfcff;
+  font-weight: bolder;
+  border-radius: 6px;
+  font-size: 21px;
+}
+
+.bordersBlue:hover {
+  background-color: #5664ff;
+  font-family: "Roboto", sans-serif;
+  color: #fcfcff;
+  font-weight: bolder;
+  border-radius: 6px;
+  font-size: 21px;
+}
+.bordersGreen:hover {
+  background-color: #2cc567;
+  font-family: "Roboto", sans-serif;
+  color: #fcfcff;
+  font-weight: bolder;
+  border-radius: 6px;
+  font-size: 21px;
+}
+.bordersYellow:hover {
+  background-color: #ffc519;
+  font-family: "Roboto", sans-serif;
+  color: #fcfcff;
+  font-weight: bolder;
+  border-radius: 6px;
+  font-size: 21px;
+}
+.bordersOrange:hover {
+  background-color: #ff822f;
+  font-family: "Roboto", sans-serif;
+  color: #fcfcff;
+  font-weight: bolder;
+  border-radius: 6px;
+  font-size: 21px;
+}
+
+.row {
+  text-align: center;
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0px 1px 0px 1px;
+  justify-content: space-between;
+  align-items: center;
+}
