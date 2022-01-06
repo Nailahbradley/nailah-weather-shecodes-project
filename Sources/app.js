@@ -1,30 +1,32 @@
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
+//current date and time
+function formDate(timestamp) {
+  let now = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
 
-let hour = now.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
-}
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day} ${hour}:${minutes}`;
 }
 
-let dateTime = document.querySelector("#daysAndTime");
-dateTime.innerHTML = `Last updated: ${day}  ${hour}:${minutes}`;
 //Date and Time
 
 function displayWeather(response) {
-  console.log(response.data.name);
+  console.log(response.data.dt);
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector(".headerDegree").innerHTML = Math.round(
     response.data.main.temp
@@ -37,6 +39,8 @@ function displayWeather(response) {
   currentWind.innerHTML = `Wind: ${wind} km/h `;
   document.querySelector("#weather").innerHTML =
     response.data.weather[0].description;
+  let dateTime = document.querySelector("#daysAndTime");
+  dateTime.innerHTML = formDate(response.data.dt * 1000);
 }
 function search(city) {
   let apiKey = "cdfcb64b7f4fb64ab376e215b5000fa5";
@@ -64,11 +68,13 @@ function showTemperatureCurrent(response) {
   let temperature = Math.round(response.data.main.temp);
   let humidity = response.data.main.humidity;
   let wind = Math.round(response.data.wind.speed);
+
   let currentWeather = document.querySelector("#weather");
   let currentCity = document.querySelector("h1");
   let currentTemp = document.querySelector(".headerDegree");
   let currentHumitdity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
+  let dateTime = document.querySelector("#daysAndTime");
   currentWeather.innerHTML = `${weather}`;
   currentHumitdity.innerHTML = `Humidity: ${humidity}%`;
   currentWind.innerHTML = `Wind: ${wind} km/h `;
