@@ -44,7 +44,6 @@ li:first-letter {
 .headerDegree {
   font-family: "Quantico", sans-serif;
   font-size: 90px;
-  color: 7f7f7f;
 }
 .headerDegree:hover {
   font-family: "Quantico", sans-serif;
@@ -52,12 +51,14 @@ li:first-letter {
   opacity: 0.8;
   color: #2cc567;
 }
-
+#ferhenhit-link,
+#celsius-link {
+  color: #7f7f7f;
+  font-size: 20px;
+}
 .farenheit {
-  font-size: 25px;
-  position: relative;
-  top: -38px;
   font-family: "Roboto";
+  position: absolute;
 }
 
 #inputCity {

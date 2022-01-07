@@ -47,6 +47,8 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  fahrenheitTemperature = response.data.main.temp;
 }
 
 function search(city) {
@@ -100,9 +102,29 @@ function showPosition(position) {
 
   axios.get(apiUrl).then(showTemperatureCurrent);
 }
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".headerDegree");
+  let celsiusTemp = ((fahrenheitTemperature - 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".headerDegree");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitTemperature = null;
+
 let currentLocation = document.querySelector("#currentButton");
 currentLocation.addEventListener("click", getCurrentLocation);
 
 let searchForm = document.querySelector("#searchCity");
 searchForm.addEventListener("submit", handleSubmit);
 search("Chicago");
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
+let fahrenheitLink = document.querySelector("#ferhenhit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
