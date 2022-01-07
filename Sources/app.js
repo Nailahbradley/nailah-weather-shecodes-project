@@ -26,7 +26,7 @@ function formDate(timestamp) {
 //Date and Time
 
 function displayWeather(response) {
-  console.log(response.data.dt);
+  console.log(response.data.weather[0].icon);
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector(".headerDegree").innerHTML = Math.round(
     response.data.main.temp
@@ -39,9 +39,16 @@ function displayWeather(response) {
   currentWind.innerHTML = `Wind: ${wind} km/h `;
   document.querySelector("#weather").innerHTML =
     response.data.weather[0].description;
-  let dateTime = document.querySelector("#daysAndTime");
-  dateTime.innerHTML = formDate(response.data.dt * 1000);
+  document.querySelector("#daysAndTime").innerHTML = formDate(
+    response.data.dt * 1000
+  );
+  let iconElement = document.querySelector("#iconWeather");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
+
 function search(city) {
   let apiKey = "cdfcb64b7f4fb64ab376e215b5000fa5";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -75,6 +82,7 @@ function showTemperatureCurrent(response) {
   let currentHumitdity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
   let dateTime = document.querySelector("#daysAndTime");
+  dateTime.innerHTML = formDate(response.data.dt * 1000);
   currentWeather.innerHTML = `${weather}`;
   currentHumitdity.innerHTML = `Humidity: ${humidity}%`;
   currentWind.innerHTML = `Wind: ${wind} km/h `;
