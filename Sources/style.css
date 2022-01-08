@@ -52,17 +52,15 @@ li:first-letter {
   color: #2cc567;
 }
 
+.active {
+  font-weight: bolder;
+  color: black;
+}
+
 #ferhenhit-link,
 #celsius-link {
-  color: #7f7f7f;
   font-size: 20px;
-  font-weight: bold;
-}
-#ferhenhit-link:hover {
-  color: #ff3e3a;
-}
-#celsius-link:hover {
-  color: #5664ff;
+  cursor: default;
 }
 
 .farenheit {

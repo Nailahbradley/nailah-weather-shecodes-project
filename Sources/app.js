@@ -109,11 +109,15 @@ function showCelsiusTemp(event) {
   let temperatureElement = document.querySelector(".headerDegree");
   let celsiusTemp = ((fahrenheitTemperature - 32) * 5) / 9;
   temperatureElement.innerHTML = Math.round(celsiusTemp);
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
 }
 function showFahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".headerDegree");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 let fahrenheitTemperature = null;
