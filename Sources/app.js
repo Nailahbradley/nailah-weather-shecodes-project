@@ -90,6 +90,8 @@ function showTemperatureCurrent(response) {
   currentWind.innerHTML = `Wind: ${wind} km/h `;
   currentTemp.innerHTML = `${temperature}`;
   currentCity.innerHTML = `${city}`;
+
+  fahrenheitTemperature = response.data.main.temp;
 }
 
 function showPosition(position) {
