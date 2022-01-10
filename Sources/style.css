@@ -119,7 +119,7 @@ li:first-letter {
 }
 
 .bordersRed:hover {
-  background-color: #ff3e3a;
+  background-color: #ff6a67;
   font-family: "Roboto", sans-serif;
   color: #fcfcff;
   font-weight: bolder;
@@ -128,7 +128,7 @@ li:first-letter {
 }
 
 .bordersBlue:hover {
-  background-color: #5664ff;
+  background-color: #7883fd;
   font-family: "Roboto", sans-serif;
   color: #fcfcff;
   font-weight: bolder;
@@ -136,7 +136,7 @@ li:first-letter {
   font-size: 21px;
 }
 .bordersGreen:hover {
-  background-color: #2cc567;
+  background-color: #62ca8a;
   font-family: "Roboto", sans-serif;
   color: #fcfcff;
   font-weight: bolder;
@@ -144,7 +144,7 @@ li:first-letter {
   font-size: 21px;
 }
 .bordersYellow:hover {
-  background-color: #ffc519;
+  background-color: #fcd151;
   font-family: "Roboto", sans-serif;
   color: #fcfcff;
   font-weight: bolder;
@@ -152,7 +152,7 @@ li:first-letter {
   font-size: 21px;
 }
 .bordersOrange:hover {
-  background-color: #ff822f;
+  background-color: #faa064;
   font-family: "Roboto", sans-serif;
   color: #fcfcff;
   font-weight: bolder;
@@ -168,6 +168,13 @@ li:first-letter {
   padding: 0px 1px 0px 1px;
   justify-content: space-between;
   align-items: flex-end;
+}
+.temperature-max {
+  font-weight: bold;
+}
+.temperature-min {
+  font-weight: lighter;
+  opacity: 0.7;
 }
 footer {
   font-size: small;
