@@ -45,12 +45,6 @@ li:first-letter {
   font-family: "Quantico", sans-serif;
   font-size: 90px;
 }
-.headerDegree:hover {
-  font-family: "Quantico", sans-serif;
-  font-size: 90px;
-  opacity: 0.8;
-  color: #2cc567;
-}
 
 .active {
   font-weight: bolder;
@@ -84,7 +78,7 @@ li:first-letter {
 .searchButton {
   padding: 14px 17px;
   margin-left: 5px;
-  background: #5664ff;
+  background: #2274a5;
   color: whitesmoke;
   border-radius: 37px;
   border: none;
@@ -94,7 +88,7 @@ li:first-letter {
 #currentButton {
   padding: 14px 19px;
   margin-left: 22px;
-  background: #ff3e3a;
+  background: #ec6e4b;
   color: whitesmoke;
   border-radius: 37px;
   border: none;
@@ -103,11 +97,7 @@ li:first-letter {
 .fas {
   font-size: 20px;
 }
-.bordersRed,
-.bordersBlue,
-.bordersGreen,
-.bordersYellow,
-.bordersOrange {
+.borders {
   border: 3px solid transparent;
   font-family: "Roboto", sans-serif;
   padding: 40px 10px 40px 10px;
@@ -118,41 +108,8 @@ li:first-letter {
   transition: all 200ms ease-in-out;
 }
 
-.bordersRed:hover {
-  background-color: #ff6a67;
-  font-family: "Roboto", sans-serif;
-  color: #fcfcff;
-  font-weight: bolder;
-  border-radius: 6px;
-  font-size: 21px;
-}
-
-.bordersBlue:hover {
-  background-color: #7883fd;
-  font-family: "Roboto", sans-serif;
-  color: #fcfcff;
-  font-weight: bolder;
-  border-radius: 6px;
-  font-size: 21px;
-}
-.bordersGreen:hover {
-  background-color: #62ca8a;
-  font-family: "Roboto", sans-serif;
-  color: #fcfcff;
-  font-weight: bolder;
-  border-radius: 6px;
-  font-size: 21px;
-}
-.bordersYellow:hover {
-  background-color: #fcd151;
-  font-family: "Roboto", sans-serif;
-  color: #fcfcff;
-  font-weight: bolder;
-  border-radius: 6px;
-  font-size: 21px;
-}
-.bordersOrange:hover {
-  background-color: #faa064;
+.borders:hover {
+  background-color: #2274a5;
   font-family: "Roboto", sans-serif;
   color: #fcfcff;
   font-weight: bolder;
@@ -166,8 +123,8 @@ li:first-letter {
   display: flex;
   margin: 0;
   padding: 0px 1px 0px 1px;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
 }
 .temperature-max {
   font-weight: bold;

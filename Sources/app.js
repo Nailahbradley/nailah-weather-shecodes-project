@@ -24,6 +24,29 @@ function formDate(timestamp) {
 }
 
 //Date and Time
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+            <div class="borders">
+       <img src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" alt="" width="37">
+        <div class="week">${day}</div>
+        <div class="temperature-max">56° <span class="temperature-min">46°</span></div>
+            </div>
+            </div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+//forecast
 
 function displayWeather(response) {
   console.log(response.data.weather[0].icon);
@@ -121,6 +144,7 @@ function showFahrenheitTemp(event) {
 }
 
 let fahrenheitTemperature = null;
+displayForecast();
 
 let currentLocation = document.querySelector("#currentButton");
 currentLocation.addEventListener("click", getCurrentLocation);
