@@ -85,7 +85,7 @@ function displayWeather(response) {
   currentHumitdity.innerHTML = `Humidity: ${humidity}%`;
   let wind = Math.round(response.data.wind.speed);
   let currentWind = document.querySelector("#wind");
-  currentWind.innerHTML = `Wind: ${wind} km/h `;
+  currentWind.innerHTML = `Wind: ${wind} m/h `;
   document.querySelector("#weather").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#daysAndTime").innerHTML = formDate(
@@ -138,7 +138,7 @@ function showTemperatureCurrent(response) {
   dateTime.innerHTML = formDate(response.data.dt * 1000);
   currentWeather.innerHTML = `${weather}`;
   currentHumitdity.innerHTML = `Humidity: ${humidity}%`;
-  currentWind.innerHTML = `Wind: ${wind} km/h `;
+  currentWind.innerHTML = `Wind: ${wind} m/h `;
   currentTemp.innerHTML = `${temperature}`;
   currentCity.innerHTML = `${city}`;
 
@@ -155,21 +155,6 @@ function showPosition(position) {
 
   axios.get(apiUrl).then(showTemperatureCurrent);
 }
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(".headerDegree");
-  let celsiusTemp = ((fahrenheitTemperature - 32) * 5) / 9;
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(".headerDegree");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
 
 let fahrenheitTemperature = null;
 
@@ -179,9 +164,3 @@ currentLocation.addEventListener("click", getCurrentLocation);
 let searchForm = document.querySelector("#searchCity");
 searchForm.addEventListener("submit", handleSubmit);
 search("Chicago");
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemp);
-
-let fahrenheitLink = document.querySelector("#ferhenhit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);

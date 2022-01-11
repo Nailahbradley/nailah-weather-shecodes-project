@@ -51,16 +51,12 @@ li:first-letter {
   color: black;
 }
 
-#ferhenhit-link,
-#celsius-link {
-  font-size: 20px;
-  cursor: default;
-}
-
 .farenheit {
   font-family: "Roboto";
   position: absolute;
   color: #7f7f7f;
+  font-weight: bolder;
+  font-size: 30px;
 }
 
 #inputCity {
