@@ -65,17 +65,15 @@ function displayForecast(response) {
 }
 
 function getWeatherForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "cdfcb64b7f4fb64ab376e215b5000fa5";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
 }
 
 //forecast
 
 function displayWeather(response) {
-  console.log(response.data.weather[0].icon);
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector(".headerDegree").innerHTML = Math.round(
     response.data.main.temp
