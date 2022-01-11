@@ -24,24 +24,40 @@ function formDate(timestamp) {
 }
 
 //Date and Time
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let weatherForecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  weatherForecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
             <div class="col-2">
             <div class="borders">
-       <img src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" alt="" width="37">
-        <div class="week">${day}</div>
-        <div class="temperature-max">56° <span class="temperature-min">46°</span></div>
+       <img src="http://openweathermap.org/img/wn/${
+         forecastDay.weather[0].icon
+       }@2x.png" alt="" width="37">
+        <div class="week">${formatDay(forecastDay.dt)}</div>
+        <div class="temperature-max"> ${Math.round(
+          forecastDay.temp.max
+        )}° <span class="temperature-min">${Math.round(
+          forecastDay.temp.min
+        )}°</span></div>
             </div>
             </div>
 `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;

@@ -100,7 +100,7 @@ li:first-letter {
 .borders {
   border: 3px solid transparent;
   font-family: "Roboto", sans-serif;
-  padding: 40px 10px 40px 10px;
+  padding: 40px 15px 40px 15px;
   margin: -9px;
   background: transparent;
   color: #58555a;
