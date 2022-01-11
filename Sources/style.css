@@ -136,6 +136,7 @@ li:first-letter {
 footer {
   font-size: small;
   margin-top: -77px;
+  max-width: 540px;
 }
 
 a {
